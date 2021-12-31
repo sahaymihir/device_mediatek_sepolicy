@@ -196,7 +196,6 @@ get_prop(em_app,radio_prop)
 
 # Date : 2020/04/30
 #Purpose: FeatureSupport ro.build.type, ro.board.platform
-get_prop(em_app,exported2_default_prop)
 get_prop(em_app,exported_default_prop)
 
 # Date: 2020/04/30

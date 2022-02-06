@@ -10,3 +10,10 @@
 #					 from MTK kernel modules for thermal tests at OEM/ODM.
 allow untrusted_app proc_mtktz:dir search;
 allow untrusted_app proc_mtktz:file r_file_perms;
+
+allow untrusted_app proc_atf_log:dir search;
+allow untrusted_app proc_m4u:dir search;
+
+get_prop(vendor_mtk_microtrust_tee_prop, untrusted_app)
+get_prop(vendor_mtk_trustkernel_tee_prop, untrusted_app)
+get_prop(vendor_mtk_trustonic_tee_prop, untrusted_app)

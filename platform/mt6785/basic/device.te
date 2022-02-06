@@ -1,0 +1,7 @@
+# ==============================================
+# Common SEPolicy Rule
+# ==============================================
+
+type gps_emi_device, dev_type;
+type vpud_device, dev_type;
+type vcu_device, dev_type;

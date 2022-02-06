@@ -1,0 +1,3 @@
+# vpud_native contorl cpu
+allow mtk_hal_power vpud_native:dir { search getattr };
+allow mtk_hal_power vpud_native:file { getattr open write read };

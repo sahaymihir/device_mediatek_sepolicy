@@ -35,12 +35,14 @@ full_treble_only(`
 
   neverallow ~{
     init
+    otapreopt_chroot
     ueventd
     vendor_init
     } sysfs:dir ~r_dir_perms;
 
   neverallow {
     init
+    otapreopt_chroot
     ueventd
     vendor_init
     } sysfs:dir ~{ r_dir_perms relabelfrom relabelto mounton setattr };
@@ -132,7 +134,7 @@ full_treble_only(`
     vendor_init
     } debugfs:dir ~{ search getattr };
 
-  neverallow init debugfs:dir ~{ search getattr relabelfrom open read setattr relabelto };
+  neverallow init debugfs:dir ~{ search getattr relabelfrom open read setattr relabelto mounton };
 
   neverallow vendor_init debugfs:dir ~{ search getattr read setattr open };
 ')
@@ -291,8 +293,6 @@ full_treble_only(`
 
   neverallow vold system_data_file:dir ~{ create rw_dir_perms mounton setattr rmdir };
 
-  neverallow vold_prepare_subdirs system_data_file:dir ~{ open read write add_name remove_name rmdir relabelfrom search getattr };
-
   with_asan(`
     neverallow asan_extract system_data_file:dir ~{ create_dir_perms relabelfrom };
    ')
@@ -449,6 +449,7 @@ full_treble_only(`
     -fastbootd
     -hal_camera
     -init
+    -otapreopt_chroot
     -recovery
     -shell
     -slideshow
@@ -475,6 +476,8 @@ full_treble_only(`
   neverallow vold device:dir ~{ search getattr write };
 
   neverallow ueventd device:dir ~create_dir_perms;
+
+  neverallow otapreopt_chroot device:dir ~{ create_dir_perms mounton };
 ')
 
 # Do not allow access to the generic socket_device label. This is too broad.

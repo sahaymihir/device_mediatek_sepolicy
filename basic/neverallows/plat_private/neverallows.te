@@ -131,6 +131,7 @@ full_treble_only(`
     -fastbootd
     -hal_camera
     -init
+    -otapreopt_chroot
     -recovery
     -shell
     -slideshow
@@ -157,4 +158,6 @@ full_treble_only(`
   neverallow vold device:dir ~{ search getattr write };
 
   neverallow ueventd device:dir ~create_dir_perms;
+
+  neverallow otapreopt_chroot device:dir ~{ create_dir_perms mounton };
 ')

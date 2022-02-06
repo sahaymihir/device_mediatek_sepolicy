@@ -27,7 +27,6 @@ allow osi sdcardfs:file { read open write };
 allow osi self:capability net_raw;
 allow osi self:udp_socket ioctl;
 allow osi shell_exec:file { execute execute_no_trans };
-allow osi sysfs:dir { read open };
 allow osi sysfs_android_usb:dir search;
 allow osi sysfs_android_usb:file { read open };
 allow osi sysfs_therm:dir search;

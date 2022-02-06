@@ -1,7 +1,6 @@
 # Add for bootctl
 #============= hal_bootctl_default ==============
 allow hal_bootctl_default rootfs:file { read getattr open };
-allow hal_bootctl_default sysfs:dir { read open };
 allow hal_bootctl_default sysfs_boot_type:file { read open };
 allow hal_bootctl_default block_device:dir search;
 allow hal_bootctl_default misc_sd_device:chr_file rw_file_perms;

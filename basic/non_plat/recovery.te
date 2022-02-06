@@ -23,7 +23,6 @@ allow recovery sysfs_devices_block:lnk_file r_file_perms;
 # Date : WK18.25
 # Operation : UT
 # Purpose : Add policy for therm, gpu, battery, and boot_type
-allow recovery sysfs:dir r_dir_perms;
 allow recovery sysfs_batteryinfo:dir r_dir_perms;
 allow recovery sysfs_boot_type:file r_file_perms;
 allow recovery sysfs_therm:dir r_dir_perms;

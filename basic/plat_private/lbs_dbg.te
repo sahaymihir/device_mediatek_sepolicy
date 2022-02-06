@@ -25,7 +25,6 @@ allow lbs_dbg fuse:dir create_dir_perms;
 allow lbs_dbg fuse:file create_file_perms;
 allow lbs_dbg sdcard_type:filesystem unmount;
 allow lbs_dbg tmpfs:filesystem unmount;
-allow lbs_dbg sysfs:dir { read open };
 allow lbs_dbg sysfs_leds:dir search;
 allow lbs_dbg sysfs_leds:lnk_file read;
 allow lbs_dbg sysfs_vibrator:file {open read write};

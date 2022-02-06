@@ -274,7 +274,6 @@ set_prop(factory, system_mtk_ctl_emdlogger1_prop)
 # Date: WK17.07
 # Purpose: Clear bootdevice (eMMC/UFS) may need to unmount tmpfs
 allow factory tmpfs:filesystem unmount;
-allow factory sysfs:dir { read open };
 allow factory sysfs_leds:dir search;
 allow factory sysfs_leds:lnk_file read;
 allow factory sysfs_leds:file rw_file_perms;

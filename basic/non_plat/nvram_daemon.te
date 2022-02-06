@@ -68,9 +68,6 @@ allow nvram_daemon nvram_data_file:lnk_file unlink;
 # Purpose: for setting property
 set_prop(nvram_daemon, vendor_mtk_service_nvram_init_prop)
 
-#WK17.26 camera 8163
-allow nvram_daemon sysfs:dir read;
-
 # Date : WK18.16
 # Operation: P migration
 # Purpose: Allow nvram_daemon to get vendor_mtk_tel_switch_prop

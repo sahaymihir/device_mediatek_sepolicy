@@ -45,7 +45,3 @@ allow em_svr self:capability { chown fsetid };
 # Date: WK1812
 # Purpose: add for shell cmd
 allow em_svr shell_exec:file rx_file_perms;
-
-# Date: WK1812
-# Purpose: sys file access
-allow em_svr sysfs:dir { open read };

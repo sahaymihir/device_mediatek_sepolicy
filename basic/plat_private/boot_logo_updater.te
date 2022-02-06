@@ -28,10 +28,7 @@ allow boot_logo_updater mtd_device:dir search;
 allow boot_logo_updater kmsg_device:chr_file w_file_perms;
 #To the access /fstab mount point
 allow boot_logo_updater rootfs:file r_file_perms;
-#To access linux filesystem
-allow boot_logo_updater sysfs:dir read;
 # sanity fail for ALPS03604686:
 # for path="/sys/firmware/devicetree/base/firmware/android/fstab" andfor name = "cmdline" and "mtdblock14"
 allow boot_logo_updater mtd_device:blk_file read;
-allow boot_logo_updater sysfs:dir open;
 allow boot_logo_updater mtd_device:blk_file open;

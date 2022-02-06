@@ -51,9 +51,6 @@ allow crash_dump sysfs_leds:dir search;
 # Purpose: Allow crash_dump to read /proc/kpageflags
 allow crash_dump proc_kpageflags:file r_file_perms;
 
-# temp solution
-get_prop(crash_dump, vendor_default_prop)
-
 hal_client_domain(crash_dump, mtk_hal_aee)
 
 # Purpose: create /data/aee_exp at runtime

@@ -27,9 +27,6 @@ allow em_app location_service:service_manager find;
 # Allow for Wifi manager usage
 allow em_app wifi_service:service_manager find;
 
-# Allow EM reading vendor property
-get_prop(em_app, vendor_default_prop)
-
 # For Wifi
 allow em_app self:udp_socket { create ioctl };
 allowxperm em_app self:udp_socket ioctl { SIOCIWFIRSTPRIV_0B SIOCIWFIRSTPRIV_0F SIOCSIWMODE SIOCIWFIRSTPRIV_01 SIOCIWFIRSTPRIV_09 SIOCDEVPRIVATE_2 };

@@ -793,3 +793,6 @@
 # Date:2020/12/24
 # add dev/socket/netdiag for security
 /dev/socket/netdiag   u:object_r:netdiag_socket:s0
+
+#Label vpud_native 
+/vendor/bin/vpud             u:object_r:vpud_native_exec:s0

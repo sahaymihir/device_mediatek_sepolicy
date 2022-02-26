@@ -79,3 +79,7 @@ allow surfaceflinger mdp_device:chr_file rw_file_perms;
 get_prop(surfaceflinger, vendor_mtk_graphics_hwc_hdr_prop)
 
 allow surfaceflinger teei_client_device:chr_file rw_file_perms;
+
+# allows surfaceflinger access render files
+get_prop(surfaceflinger, vendor_mtk_pq_prop)
+get_prop(surfaceflinger, vendor_mtk_pq_ro_prop)
